@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Program</title>
+	<style>
+		*{
+			outline: none;
+		}
+		.form-style{
+			
+		}
+		.div-style1{
+			position: relative;
+			width: 43%;
+			
+			float: left;
+			font-size: 26px;
+			text-align: right;
+			top: 280px;
+			bottom: -100px;
+			
+		}
+		.div-style2{
+			position: relative;
+			width: 13%;
+			float: left;
+			font-size: 26px;
+			
+			margin-left: 50px;
+			top: 120px;
+			
+			left: 35px;
+			bottom: -150px;
+		}
+		.div-style3
+		{
+			position: relative;
+			width: 30%;
+			
+			float: left;
+			font-size: 26px;
+			text-align: left;
+			
+			top: 280px;
+			
+			bottom: -150px;
+		}
+		.input-style{
+			width: 200px;
+			height: 50px;
+			border-radius: 10px;
+			margin-bottom: 10px;
+		}
+		.body-style
+		{
+			background-image: url('dog.jpg');
+			background-size: 100% 200%;
+
+			background-repeat: no-repeat;
+		}
+		.div-style{
+			width: 100%;
+			text-align: center;
+		}
+		.div-4 {
+			  width: 100px;
+			  height: 100px;
+			 
+			  
+			  position: absolute;
+			  animation-name: example;
+			  animation-duration: 30s;
+			}
+
+		@keyframes example {
+		  0%   { left:0%; top:0%;}
+		  25%  { left:90%; top:0%;}
+		  50%  {left:90%; top:90%;}
+		  75%  { left:0%; top:90%;}
+		  100% { left:0%; top:0%;}
+		}
+	</style>
+</head>
+<body class="body-style">
+	<div class="div-4">
+		<img src="dog2.gif" width="100" height="100" >
+	</div>
+	<div>
+	<div style="width: 80%;margin: 0px auto; margin-top: 50px;">
+		<h1 style="width: 100%;font-size: 50px;"><span style="text-align: left;">To see the Magic</span><span style="float: right;">Pat My Nose</span></h1>
+	</div>
+	<div class="div-style1">
+		<label><h1>Your Age</h1></label>
+		<input type="number" id="temp" class="input-style" step="any" placeholder="Years"><br>		
+		<select id="temp2" class="input-style" style="width: 208px;">
+			<option value="0">Months</option>
+			<option value="0">0</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="10">10</option>
+			<option value="11">11</option>
+			<option value="12">12</option>
+
+		</select>
+		
+		
+	</div>
+	<div class="div-style2">
+		<button onclick="tem()" style="background-color: rgb(255, 255, 255,0);padding:40px;border:none">
+			 
+		</button>
+	</div>
+	<div class="div-style3">
+		
+		<label><h1>My Age</h1></label>
+		<input type="text" id="result" class="input-style" step="any" placeholder="Years"><br >
+		
+		<input type="text" id="result1" class="input-style" step="any" placeholder="Months"><br >
+		
+	</div>
+	<script>
+		function tem()
+		{	
+			debugger;
+			var b=0;
+			var b1=0;
+			var c=0;
+			var d=0;
+			var e=1;
+			var f=0;
+			var r=0;
+			var i=0;
+			var a=document.getElementById('temp').value;
+			b1 = parseFloat(a);
+			i=document.getElementById('temp2').value;
+			c=parseFloat(i);
+			d=c/12;
+			b=b1+d;
+
+			// var t=document.getElementById('choice').value;
+			if(b>0 && b<=21)
+			{
+				c=b/10.5;	
+			}
+			else if(b>21)
+			{
+				c=2+((b-21)/4);	
+			}
+			else
+			{
+				alert("Behave like a Human");
+			}
+			e=parseInt(c);
+			f=c-e;
+			g=f*12;
+			g=parseInt(g);
+			document.getElementById('result').value=e + " Years";
+			document.getElementById('result1').value=g + " Months";
+
+		}
+			
+	</script>
+</body>
+</html>
